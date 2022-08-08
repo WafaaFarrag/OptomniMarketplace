@@ -7,11 +7,13 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
-class ChatHelper : ObservableObject {
+class ChatViewModel : ObservableObject {
     
     var didChange = PassthroughSubject<Void, Never>()
     @Published var realTimeMessages = ChatDataSource.messages
+    @ObservedObject var keyboard = KeyboardResponder()
     
     func sendMessage(_ chatMessage: Message) {
         realTimeMessages.append(chatMessage)

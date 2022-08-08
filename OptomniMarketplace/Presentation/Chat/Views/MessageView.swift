@@ -9,12 +9,15 @@ import SwiftUI
 
 struct MessageView : View {
     
-    var currentMessage: Message
+    private var viewModel: MessageViewModel
     
+    init(viewModel: MessageViewModel) {
+        self.viewModel = viewModel
+    }
     var body: some View {
         HStack(alignment: .bottom, spacing: 15) {
-            if !currentMessage.user.isCurrentUser {
-                Image(systemName: currentMessage.user.avatar)
+            if !viewModel.currentMessage.user.isCurrentUser {
+                Image(systemName: viewModel.currentMessage.user.avatar)
                 .resizable()
                 .frame(width: 40, height: 40, alignment: .center)
                 .cornerRadius(20)
@@ -23,15 +26,17 @@ struct MessageView : View {
                 Spacer()
 
             }
-            ContentMessageView(contentMessage: currentMessage.content,
-                               isCurrentUser: currentMessage.user.isCurrentUser)
+            let contentMessageVM = ContentMessageViewModel(contentMessage: viewModel.currentMessage.content, isCurrentUser: viewModel.currentMessage.user.isCurrentUser)
+             ContentMessageView(viewModel: contentMessageVM)
         }.padding()
     }
 }
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView(currentMessage: Message(id: UUID(), content: "There are a lot of premium iOS templates on iosapptemplates.com", user: ChatDataSource.firstUser))
+        let viewModel = MessageViewModel(currentMessage: Message(id: UUID(), content: "There are a lot of premium iOS templates on iosapptemplates.com", user: ChatDataSource.firstUser))
+        MessageView(viewModel: viewModel)
+        
     }
     
 

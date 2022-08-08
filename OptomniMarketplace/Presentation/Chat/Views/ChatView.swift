@@ -10,8 +10,7 @@ import SwiftUI
 struct ChatView: View {
     
     @State private var typingMessage: String = ""
-    @ObservedObject private var keyboard = KeyboardResponder()
-    @EnvironmentObject var chatHelper: ChatHelper
+    @EnvironmentObject var viewModel: ChatViewModel
     
     
     
@@ -19,11 +18,17 @@ struct ChatView: View {
         
         NavigationView {
             VStack {
-                List {
-                    ForEach(chatHelper.realTimeMessages, id: \.self) { msg in
-                        MessageView(currentMessage: msg)
+                ScrollView {
+                    LazyVStack(alignment: .leading) {
+                        ForEach(viewModel.realTimeMessages, id: \.self) { msg in
+                            let viewModel = MessageViewModel(currentMessage: msg)
+                            MessageView(viewModel: viewModel)
+                        }
                     }
                 }
+                
+                
+                
                 HStack {
                     TextField("Message...", text: $typingMessage)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -32,22 +37,23 @@ struct ChatView: View {
                         Text("Send")
                     }
                 }.frame(minHeight: CGFloat(50)).padding()
+                
             }.navigationBarTitle(Text(ChatDataSource.firstUser.name), displayMode: .inline)
-                .padding(.bottom, keyboard.currentHeight)
-                .edgesIgnoringSafeArea(keyboard.currentHeight == 0.0 ? .leading: .bottom)
+                .padding(.bottom, viewModel.keyboard.currentHeight)
+                .edgesIgnoringSafeArea(viewModel.keyboard.currentHeight == 0.0 ? .leading: .bottom)
         }.onTapGesture {
             self.endEditing(true)
         }
     }
     
-    func sendMessage() {
-        chatHelper.sendMessage(Message(id: UUID(), content: typingMessage, user: ChatDataSource.secondUser))
+    private func sendMessage() {
+        viewModel.sendMessage(Message(id: UUID(), content: typingMessage, user: ChatDataSource.secondUser))
         typingMessage = ""
     }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView().environmentObject(ChatHelper())
+        ChatView().environmentObject(ChatViewModel())
     }
 }

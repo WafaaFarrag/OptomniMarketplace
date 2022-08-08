@@ -11,7 +11,7 @@
 		EF0F8D0F289D788500A6ABE1 /* ContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F8D0E289D788500A6ABE1 /* ContentMessageView.swift */; };
 		EF0F8D11289D789600A6ABE1 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F8D10289D789600A6ABE1 /* MessageView.swift */; };
 		EF0F8D13289D78A800A6ABE1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F8D12289D78A800A6ABE1 /* ChatView.swift */; };
-		EF0F8D17289D7AF300A6ABE1 /* ChatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F8D16289D7AF300A6ABE1 /* ChatHelper.swift */; };
+		EF0F8D17289D7AF300A6ABE1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F8D16289D7AF300A6ABE1 /* ChatViewModel.swift */; };
 		EF0F8D19289D7B2600A6ABE1 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F8D18289D7B2600A6ABE1 /* KeyboardResponder.swift */; };
 		EF0F8D1B289D7B7700A6ABE1 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F8D1A289D7B7700A6ABE1 /* ViewExtension.swift */; };
 		EF0F8D1D289D7C5D00A6ABE1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F8D1C289D7C5D00A6ABE1 /* User.swift */; };
@@ -29,8 +29,8 @@
 		EF3E9A68289C648200490BC5 /* OptomniMarketplaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3E9A67289C648200490BC5 /* OptomniMarketplaceTests.swift */; };
 		EF3E9A72289C648200490BC5 /* OptomniMarketplaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3E9A71289C648200490BC5 /* OptomniMarketplaceUITests.swift */; };
 		EF3E9A74289C648200490BC5 /* OptomniMarketplaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3E9A73289C648200490BC5 /* OptomniMarketplaceUITestsLaunchTests.swift */; };
-		EF4548C228A0F62400F0A1E1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4548C128A0F62400F0A1E1 /* ChatViewModel.swift */; };
 		EF99053228A0FFE7006CDB1E /* ContentMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99053128A0FFE7006CDB1E /* ContentMessageViewModel.swift */; };
+		EF99053828A191EE006CDB1E /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99053728A191EE006CDB1E /* MessageViewModel.swift */; };
 		EFB3A491289C656D00B82ABB /* ProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3A487289C656D00B82ABB /* ProductSection.swift */; };
 		EFB3A492289C656D00B82ABB /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3A488289C656D00B82ABB /* CheckoutView.swift */; };
 		EFB3A493289C656D00B82ABB /* HomePrpductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3A489289C656D00B82ABB /* HomePrpductRow.swift */; };
@@ -71,7 +71,7 @@
 		EF0F8D0E289D788500A6ABE1 /* ContentMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageView.swift; sourceTree = "<group>"; };
 		EF0F8D10289D789600A6ABE1 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		EF0F8D12289D78A800A6ABE1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		EF0F8D16289D7AF300A6ABE1 /* ChatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHelper.swift; sourceTree = "<group>"; };
+		EF0F8D16289D7AF300A6ABE1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		EF0F8D18289D7B2600A6ABE1 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		EF0F8D1A289D7B7700A6ABE1 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		EF0F8D1C289D7C5D00A6ABE1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 		EF3E9A6D289C648200490BC5 /* OptomniMarketplaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptomniMarketplaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3E9A71289C648200490BC5 /* OptomniMarketplaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptomniMarketplaceUITests.swift; sourceTree = "<group>"; };
 		EF3E9A73289C648200490BC5 /* OptomniMarketplaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptomniMarketplaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EF4548C128A0F62400F0A1E1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		EF99053128A0FFE7006CDB1E /* ContentMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageViewModel.swift; sourceTree = "<group>"; };
+		EF99053728A191EE006CDB1E /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		EFB3A487289C656D00B82ABB /* ProductSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSection.swift; sourceTree = "<group>"; };
 		EFB3A488289C656D00B82ABB /* CheckoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		EFB3A489289C656D00B82ABB /* HomePrpductRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePrpductRow.swift; sourceTree = "<group>"; };
@@ -140,10 +140,9 @@
 		EF0F8D0B289D781000A6ABE1 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				EF99053028A0FF60006CDB1E /* ViewModel */,
 				EF0F8D1F289D80E200A6ABE1 /* Views */,
+				EF99053028A0FF60006CDB1E /* ViewModels */,
 				EF0F8D1E289D7D2A00A6ABE1 /* Utils */,
-				EF4548C128A0F62400F0A1E1 /* ChatViewModel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -152,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				EF0F8D1A289D7B7700A6ABE1 /* ViewExtension.swift */,
-				EF0F8D16289D7AF300A6ABE1 /* ChatHelper.swift */,
 				EF0F8D18289D7B2600A6ABE1 /* KeyboardResponder.swift */,
 			);
 			path = Utils;
@@ -349,12 +347,14 @@
 			path = OptomniMarketplaceUITests;
 			sourceTree = "<group>";
 		};
-		EF99053028A0FF60006CDB1E /* ViewModel */ = {
+		EF99053028A0FF60006CDB1E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EF0F8D16289D7AF300A6ABE1 /* ChatViewModel.swift */,
 				EF99053128A0FFE7006CDB1E /* ContentMessageViewModel.swift */,
+				EF99053728A191EE006CDB1E /* MessageViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		EFBA4555289C684300AB84DD /* Home */ = {
@@ -582,7 +582,6 @@
 				EF99053228A0FFE7006CDB1E /* ContentMessageViewModel.swift in Sources */,
 				EFB3A496289C656D00B82ABB /* MainView.swift in Sources */,
 				EF0F8D0F289D788500A6ABE1 /* ContentMessageView.swift in Sources */,
-				EF4548C228A0F62400F0A1E1 /* ChatViewModel.swift in Sources */,
 				EF3E9A59289C648100490BC5 /* HomeView.swift in Sources */,
 				EF0F8D1B289D7B7700A6ABE1 /* ViewExtension.swift in Sources */,
 				EF0F8D2D289EC3F500A6ABE1 /* PaymentTypes.swift in Sources */,
@@ -597,6 +596,7 @@
 				EFBA4564289D0D8C00AB84DD /* OrdersHistoryView.swift in Sources */,
 				EFB3A49A289C656D00B82ABB /* Helper.swift in Sources */,
 				EF0F8D11289D789600A6ABE1 /* MessageView.swift in Sources */,
+				EF99053828A191EE006CDB1E /* MessageViewModel.swift in Sources */,
 				EFBA4573289D12BD00AB84DD /* OrderHistoryItem.swift in Sources */,
 				EFBA4560289C6C9F00AB84DD /* MarketplaceRow.swift in Sources */,
 				EF0F8D31289ECEA600A6ABE1 /* MarketplaceViewModel.swift in Sources */,
@@ -604,7 +604,7 @@
 				EF0F8D3B289EE85100A6ABE1 /* CheckOutViewModel.swift in Sources */,
 				EFB3A492289C656D00B82ABB /* CheckoutView.swift in Sources */,
 				EF3E9A57289C648100490BC5 /* OptomniMarketplaceApp.swift in Sources */,
-				EF0F8D17289D7AF300A6ABE1 /* ChatHelper.swift in Sources */,
+				EF0F8D17289D7AF300A6ABE1 /* ChatViewModel.swift in Sources */,
 				EF0F8D35289ECFB600A6ABE1 /* ItemDetailsViewModel.swift in Sources */,
 				EF0F8D1D289D7C5D00A6ABE1 /* User.swift in Sources */,
 			);
