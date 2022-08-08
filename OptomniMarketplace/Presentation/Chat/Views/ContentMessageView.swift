@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentMessageView: View {
+    
     var contentMessage: String
     var isCurrentUser: Bool
     

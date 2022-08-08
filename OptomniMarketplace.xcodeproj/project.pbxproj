@@ -30,6 +30,7 @@
 		EF3E9A72289C648200490BC5 /* OptomniMarketplaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3E9A71289C648200490BC5 /* OptomniMarketplaceUITests.swift */; };
 		EF3E9A74289C648200490BC5 /* OptomniMarketplaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3E9A73289C648200490BC5 /* OptomniMarketplaceUITestsLaunchTests.swift */; };
 		EF4548C228A0F62400F0A1E1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4548C128A0F62400F0A1E1 /* ChatViewModel.swift */; };
+		EF99053228A0FFE7006CDB1E /* ContentMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99053128A0FFE7006CDB1E /* ContentMessageViewModel.swift */; };
 		EFB3A491289C656D00B82ABB /* ProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3A487289C656D00B82ABB /* ProductSection.swift */; };
 		EFB3A492289C656D00B82ABB /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3A488289C656D00B82ABB /* CheckoutView.swift */; };
 		EFB3A493289C656D00B82ABB /* HomePrpductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3A489289C656D00B82ABB /* HomePrpductRow.swift */; };
@@ -92,6 +93,7 @@
 		EF3E9A71289C648200490BC5 /* OptomniMarketplaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptomniMarketplaceUITests.swift; sourceTree = "<group>"; };
 		EF3E9A73289C648200490BC5 /* OptomniMarketplaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptomniMarketplaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF4548C128A0F62400F0A1E1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		EF99053128A0FFE7006CDB1E /* ContentMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageViewModel.swift; sourceTree = "<group>"; };
 		EFB3A487289C656D00B82ABB /* ProductSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSection.swift; sourceTree = "<group>"; };
 		EFB3A488289C656D00B82ABB /* CheckoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		EFB3A489289C656D00B82ABB /* HomePrpductRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePrpductRow.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		EF0F8D0B289D781000A6ABE1 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				EF99053028A0FF60006CDB1E /* ViewModel */,
 				EF0F8D1F289D80E200A6ABE1 /* Views */,
 				EF0F8D1E289D7D2A00A6ABE1 /* Utils */,
 				EF4548C128A0F62400F0A1E1 /* ChatViewModel.swift */,
@@ -344,6 +347,14 @@
 				EF3E9A73289C648200490BC5 /* OptomniMarketplaceUITestsLaunchTests.swift */,
 			);
 			path = OptomniMarketplaceUITests;
+			sourceTree = "<group>";
+		};
+		EF99053028A0FF60006CDB1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF99053128A0FFE7006CDB1E /* ContentMessageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EFBA4555289C684300AB84DD /* Home */ = {
@@ -568,6 +579,7 @@
 				EFB3A491289C656D00B82ABB /* ProductSection.swift in Sources */,
 				EF0F8D19289D7B2600A6ABE1 /* KeyboardResponder.swift in Sources */,
 				EF0F8D27289D8D5200A6ABE1 /* HomeViewModel.swift in Sources */,
+				EF99053228A0FFE7006CDB1E /* ContentMessageViewModel.swift in Sources */,
 				EFB3A496289C656D00B82ABB /* MainView.swift in Sources */,
 				EF0F8D0F289D788500A6ABE1 /* ContentMessageView.swift in Sources */,
 				EF4548C228A0F62400F0A1E1 /* ChatViewModel.swift in Sources */,
