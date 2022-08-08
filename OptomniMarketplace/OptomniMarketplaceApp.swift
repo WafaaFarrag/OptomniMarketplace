@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct OptomniMarketplaceApp: App {
+    @StateObject var order = Order()
+    var chatHelper = ChatHelper()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(order)
+                .environmentObject(chatHelper)
         }
     }
 }
