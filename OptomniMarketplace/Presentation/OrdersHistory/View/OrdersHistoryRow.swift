@@ -27,7 +27,7 @@ struct OrdersHistoryRow: View {
         }.padding(20)
             .font(.subheadline)
             .foregroundColor(.primary)
-            .background(.secondary)
+            .background(.secondary).opacity(0.5)
             .cornerRadius(8)
             .shadow(radius: CGFloat(5.0))
             
