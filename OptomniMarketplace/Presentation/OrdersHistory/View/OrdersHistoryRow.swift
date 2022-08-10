@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OrdersHistoryRow: View {
     var item: OrderHistoryItem
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -23,10 +24,11 @@ struct OrdersHistoryRow: View {
                 Text("\(item.date)")
             }
             
-        }.padding(15)
+        }.padding(20)
             .font(.subheadline)
-            .foregroundColor(.secondary)
-            .background(.white)
+            .foregroundColor(.primary)
+            .background(.secondary)
+            .cornerRadius(8)
             .shadow(radius: CGFloat(5.0))
             
             
